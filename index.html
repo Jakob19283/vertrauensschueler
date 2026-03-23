@@ -5,94 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertrauensschüler Team</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <canvas id="galaxy-canvas"></canvas>
 
     <div class="custom-cursor"></div>
     <div class="cursor-follower"></div>
 
-    <header class="hero-section">
-        <div class="stars"></div>
-        <div class="content-wrapper">
-            <h1 class="glitch" data-text="Vertrauensschüler">Vertrauensschüler</h1>
-            <p class="subtitle">Deine Stimme, Unsere Mission</p>
-            <nav class="main-nav">
-                <a href="#about" class="nav-link">Über Uns</a>
-                <a href="#tasks" class="nav-link">Aufgaben</a>
-                <a href="#contact" class="nav-link">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="about" class="content-section">
-            <h2>Wer wir sind</h2>
-            <div class="card-container">
-                <div class="info-card">
-                    <div class="card-icon">🤝</div>
-                    <h3>Verbindung</h3>
-                    <p>Wir sind die Brücke zwischen Schülern, Lehrern und der Schulleitung.</p>
-                    <button class="card-button">Mehr erfahren</button>
-                </div>
-                <div class="info-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Engagement</h3>
-                    <p>Wir setzen uns aktiv für die Belange und Anliegen aller Schüler ein.</p>
-                    <button class="card-button">Mehr erfahren</button>
-                </div>
-                <div class="info-card">
-                    <div class="card-icon">💡</div>
-                    <h3>Innovation</h3>
-                    <p>Wir bringen frische Ideen ein, um unser Schulleben zu verbessern.</p>
-                    <button class="card-button">Mehr erfahren</button>
-                </div>
+    <div class="page-wrapper">
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">
+                    <span class="title-part">Vertrauens</span>
+                    <span class="title-part accent">schüler</span>
+                </h1>
+                <p class="hero-tagline">Deine Stimme. Unsere Mission. Gemeinsam Zukunft gestalten.</p>
+                <nav class="main-nav">
+                    <a href="#about" class="nav-link">Über Uns</a>
+                    <a href="#tasks" class="nav-link">Aufgaben</a>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </nav>
             </div>
-        </section>
+            <div class="scroll-indicator">
+                <span>Scrollen</span>
+                <div class="mouse-icon"></div>
+            </div>
+        </header>
 
-        <section id="tasks" class="content-section">
-            <h2>Unsere Aufgaben</h2>
-            <div class="task-list">
-                <div class="task-item">
-                    <span class="task-number">01</span>
-                    <div class="task-content">
-                        <h3>Schülerversammlungen organisieren</h3>
-                        <p>Wir planen und leiten regelmäßige Treffen, um eure Anliegen zu hören.</p>
+        <main>
+            <section id="about" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Das Team</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="card-bg-effect"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">🤝</div>
+                        </div>
+                        <h3 class="card-title">Verbindung</h3>
+                        <p class="card-description">Wir sind die Brücke zwischen Schülern, Lehrern und der Schulleitung und sorgen für einen reibungslosen Dialog.</p>
+                        <button class="glow-button">
+                            <span>Entdecke mehr</span>
+                            <div class="button-bg"></div>
+                        </button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-bg-effect"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">🎯</div>
+                        </div>
+                        <h3 class="card-title">Engagement</h3>
+                        <p class="card-description">Mit Leidenschaft setzen wir uns aktiv für die Belange und Anliegen aller Schüler ein und kämpfen für eure Rechte.</p>
+                        <button class="glow-button">
+                            <span>Entdecke mehr</span>
+                            <div class="button-bg"></div>
+                        </button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-bg-effect"></div>
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">💡</div>
+                        </div>
+                        <h3 class="card-title">Innovation</h3>
+                        <p class="card-description">Wir bringen frische, kreative Ideen ein, um unser Schulleben kontinuierlich zu verbessern und modern zu gestalten.</p>
+                        <button class="glow-button">
+                            <span>Entdecke mehr</span>
+                            <div class="button-bg"></div>
+                        </button>
                     </div>
                 </div>
-                <div class="task-item">
-                    <span class="task-number">02</span>
-                    <div class="task-content">
-                        <h3>Projekte umsetzen</h3>
-                        <p>Von Schulpartys über Spendenaktionen bis hin zu Umweltschutzinitiativen.</p>
+            </section>
+
+            <section id="tasks" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Unsere Mission</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Schülerversammlungen organisieren</h3>
+                            <p>Wir planen und leiten regelmäßige Treffen, um eure Anliegen zu hören und gemeinsam Lösungen zu finden.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Projekte umsetzen</h3>
+                            <p>Von Schulpartys über Spendenaktionen bis hin zu Umweltschutzinitiativen – wir machen es möglich.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Vermitteln und Helfen</h3>
+                            <p>Wir sind immer ansprechbar für Probleme und vermitteln vertraulich und fair bei Konflikten.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="task-item">
-                    <span class="task-number">03</span>
-                    <div class="task-content">
-                        <h3>Vermitteln und Helfen</h3>
-                        <p>Wir sind immer ansprechbar für Probleme und vermitteln bei Konflikten.</p>
+            </section>
+
+            <section id="contact" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Kommunikation</h2>
+                    <div class="title-line"></div>
+                </div>
+                <div class="contact-box">
+                    <p class="contact-intro">Du hast eine Idee, ein Problem oder ein Anliegen? Zögere nicht, uns zu kontaktieren!</p>
+                    <div class="contact-grid">
+                        <a href="mailto:vertrauensschueler@schule.de" class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div class="contact-info">
+                                <strong>E-Mail</strong>
+                                <span>vertrauensschueler@schule.de</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div class="contact-info">
+                                <strong>Raum</strong>
+                                <span>123 (im Hauptgebäude)</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <div class="contact-info">
+                                <strong>Sprechstunde</strong>
+                                <span>Jeden Freitag 13:00 Uhr</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <section id="contact" class="content-section">
-            <h2>Erreichbarkeit</h2>
-            <div class="contact-container">
-                <p class="contact-text">Du hast eine Idee oder ein Anliegen? Wir hören zu!</p>
-                <div class="contact-links">
-                    <a href="mailto:vertrauensschueler@schule.de" class="contact-link">📧 vertrauensschueler@schule.de</a>
-                    <a href="#" class="contact-link">📍 Raum 123 (im Hauptgebäude)</a>
-                    <a href="#" class="contact-link">📞 Sprechstunde: Jeden Freitag 13:00 Uhr</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Vertrauensschüler Team. Gemeinsam machen wir unsere Schule besser.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Vertrauensschüler Team. Gemeinsam machen wir unsere Schule besser.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
