@@ -11,9 +11,6 @@
 
     <canvas id="galaxy-canvas"></canvas>
 
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
     <div class="page-wrapper">
         <header class="hero-section">
             <div class="hero-content">
@@ -49,10 +46,13 @@
                         </div>
                         <h3 class="card-title">Verbindung</h3>
                         <p class="card-description">Wir sind die Brücke zwischen Schülern, Lehrern und der Schulleitung und sorgen für einen reibungslosen Dialog.</p>
-                        <button class="glow-button">
-                            <span>Entdecke mehr</span>
+                        <button class="glow-button" onclick="toggleInfo(this)">
+                            <span>Mehr erfahren</span>
                             <div class="button-bg"></div>
                         </button>
+                        <div class="card-extra-info">
+                            <p>In regelmäßigen Treffen mit der Schulleitung bringen wir eure Anliegen direkt zur Sprache. Wir protokollieren wichtige Beschlüsse und sorgen für Transparenz, damit jeder weiß, was in der Schule entschieden wird. Unsere Tür ist immer offen für eure Vorschläge.</p>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="card-bg-effect"></div>
@@ -61,10 +61,13 @@
                         </div>
                         <h3 class="card-title">Engagement</h3>
                         <p class="card-description">Mit Leidenschaft setzen wir uns aktiv für die Belange und Anliegen aller Schüler ein und kämpfen für eure Rechte.</p>
-                        <button class="glow-button">
-                            <span>Entdecke mehr</span>
+                        <button class="glow-button" onclick="toggleInfo(this)">
+                            <span>Mehr erfahren</span>
                             <div class="button-bg"></div>
                         </button>
+                        <div class="card-extra-info">
+                            <p>Unser Engagement geht über das Normale hinaus. Wir organisieren Events, führen Umfragen durch und setzen uns für bessere Lernbedingungen ein. Ob es um die Mensa, Schulhofausstattung oder digitale Lernmittel geht – wir sind eure loudspeaker.</p>
+                        </div>
                     </div>
                     <div class="feature-card">
                         <div class="card-bg-effect"></div>
@@ -73,10 +76,13 @@
                         </div>
                         <h3 class="card-title">Innovation</h3>
                         <p class="card-description">Wir bringen frische, kreative Ideen ein, um unser Schulleben kontinuierlich zu verbessern und modern zu gestalten.</p>
-                        <button class="glow-button">
-                            <span>Entdecke mehr</span>
+                        <button class="glow-button" onclick="toggleInfo(this)">
+                            <span>Mehr erfahren</span>
                             <div class="button-bg"></div>
                         </button>
+                        <div class="card-extra-info">
+                            <p>Wir denken voraus! Von der Einführung einer Schul-App über Nachhaltigkeitsprojekte bis hin zu neuen AG-Angeboten – wir suchen ständig nach Wegen, unsere Schule zukunftsfähig und attraktiver zu machen. Jede gute Idee ist willkommen!</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -119,25 +125,25 @@
                 <div class="contact-box">
                     <p class="contact-intro">Du hast eine Idee, ein Problem oder ein Anliegen? Zögere nicht, uns zu kontaktieren!</p>
                     <div class="contact-grid">
-                        <a href="mailto:vertrauensschueler@schule.de" class="contact-item">
+                        <a href="mailto:vertrauensschueler@isarnwohld.org" class="contact-item">
                             <span class="contact-icon">📧</span>
                             <div class="contact-info">
                                 <strong>E-Mail</strong>
-                                <span>vertrauensschueler@schule.de</span>
+                                <span>vertrauensschueler@isarnwohld.org</span>
                             </div>
                         </a>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
                             <div class="contact-info">
                                 <strong>Raum</strong>
-                                <span>123 (im Hauptgebäude)</span>
+                                <span>M5</span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📞</span>
                             <div class="contact-info">
                                 <strong>Sprechstunde</strong>
-                                <span>Jeden Freitag 13:00 Uhr</span>
+                                <span>Jede 2. Große Pause von Montag-Freitag</span>
                             </div>
                         </div>
                     </div>
