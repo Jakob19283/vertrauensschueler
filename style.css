@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #00d4ff;
+    --primary-color: #00ffff;
     --secondary-color: #ff00ff;
-    --background-color: #0a0a0f;
-    --surface-color: #1a1a2e;
-    --text-color: #e0e0e0;
-    --accent-color: #f39c12;
+    --accent-color: #ffff00;
+    --bg-dark: #0a0a0a;
+    --bg-medium: #1a1a1a;
+    --text-light: #ffffff;
+    --text-dim: #b0b0b0;
+    --card-bg: rgba(20, 20, 40, 0.7);
 }
 
 * {
@@ -14,109 +16,49 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Exo 2', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     overflow-x: hidden;
     line-height: 1.6;
-    cursor: none; /* Standard cursor ausblenden */
+    cursor: none; /* Standard-Cursor komplett ausblenden */
 }
 
-/* Custom Cursor - Korrigiert und verbessert */
+/* Custom Cursor - Garantiert sichtbar */
 .custom-cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--primary-color);
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
     border-radius: 50%;
     position: fixed;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* Wichtig, damit der Cursor nicht blockiert */
-    transition: background-color 0.2s, transform 0.2s, border-color 0.2s;
-    z-index: 10000;
-    mix-blend-mode: difference; /* Effekt für bessere Sichtbarkeit */
+    pointer-events: none;
+    z-index: 99999;
+    transition: transform 0.1s ease, background-color 0.3s ease;
+    box-shadow: 0 0 20px var(--primary-color);
 }
 
 .cursor-follower {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 212, 255, 0.1);
-    border: 1px solid rgba(0, 212, 255, 0.3);
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgba(0, 255, 255, 0.5);
     border-radius: 50%;
     position: fixed;
     transform: translate(-50%, -50%);
-    pointer-events: none; /* Wichtig */
-    transition: transform 0.15s ease-out, background-color 0.3s;
-    z-index: 9999;
+    pointer-events: none;
+    z-index: 99998;
+    transition: transform 0.2s ease-out, border-color 0.3s ease;
+    background: rgba(0, 255, 255, 0.05);
 }
 
-/* Cursor-Effekt beim Hover über interaktive Elemente */
-a, button, .nav-link {
-    cursor: none; /* Auch hier Standard ausblenden */
-}
-
-body:hover .custom-cursor {
-    transform: translate(-50%, -50%) scale(1.5);
-    background-color: rgba(0, 212, 255, 0.5);
-}
-
-/* Animated Background */
-.hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, var(--background-color) 0%, var(--surface-color) 100%);
-    overflow: hidden;
-}
-
-.stars {
-    position: absolute;
+/* Interaktiver Galaxy-Hintergrund */
+#galaxy-canvas {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    z-index: -1;
 }
 
-.stars::before,
-.stars::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    box-shadow: 
-        100px 200px white, 300px 100px white, 500px 300px white, 700px 250px white,
-        900px 150px white, 1100px 350px white, 150px 450px white, 350px 550px white,
-        550px 650px white, 750px 750px white, 950px 850px white, 1150px 950px white,
-        200px 50px white, 400px 150px white, 600px 250px white, 800px 350px white,
-        1000px 450px white, 1200px 550px white, 250px 650px white, 450px 750px white,
-        650px 850px white, 850px 950px white, 1050px 50px white, 1250px 150px white;
-    animation: animStar 50s linear infinite;
-}
-
-.stars::after {
-    width: 1px;
-    height: 1px;
-    animation-delay: 25s;
-    animation-duration: 100s;
-}
-
-@keyframes animStar {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-1000px);
-    }
-}
-
-/* Hero Content */
-.content-wrapper {
-    z-index: 1;
-}
-
-.glitch {
-    font-size: clamp(3rem, 10vw
+.page
